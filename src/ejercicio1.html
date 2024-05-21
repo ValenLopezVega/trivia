@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //paso 1: Pedir la edad
+    let ageInYears = prompt('Ingrese su edad');
+
+    //paso 2: Hacer el proceso
+    ageInDays = ageInYears*365;
+    ageInHours = ageInDays*24;
+    ageInMinuts = ageInHours*60;
+    ageInSeconds = ageInMinuts*60;
+
+    //paso 3: Mostrar el resultado
+    document.write(`Su edad en segundos es: ${ageInSeconds}`);
+
+  </script>
+</body>
+</html>
