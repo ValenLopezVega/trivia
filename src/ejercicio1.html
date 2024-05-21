@@ -7,16 +7,13 @@
 </head>
 <body>
   <script>
-    //paso 1: Pedir la edad
-    let ageInYears = prompt('Ingrese su edad');
+    //step 1: Ask for the age in years
+    let age = prompt('Ingrese su edad');
 
-    //paso 2: Hacer el proceso
-    ageInDays = ageInYears*365;
-    ageInHours = ageInDays*24;
-    ageInMinuts = ageInHours*60;
-    ageInSeconds = ageInMinuts*60;
+    //step 2: make the operations
+    ageInSeconds = age *60*60*24*365;
 
-    //paso 3: Mostrar el resultado
+    //step 3: Show the age in seconds
     document.write(`Su edad en segundos es: ${ageInSeconds}`);
 
   </script>
