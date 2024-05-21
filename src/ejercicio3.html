@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Ganancias y pérdidas: Crea un programa que pide los ingresos, los costos y el % de impuestos, y calcula la ganancia después de impuestos. Debe imprimir el resultado en la web con el símbolo $ adelante.
+
+    // ask for the data
+    income = prompt('¿Cuál es el valor de sus ingresos totales?');
+    costs = prompt('¿Cuál es el valor de los costos?');
+    taxPercent = prompt('¿Cuál es el porcentaje de impuestos?');
+
+
+    // do the operations to get the net income
+    grossIncome = income - costs ;
+    tax = (grossIncome/100)*taxPercent;
+    netIncome = grossIncome - tax;
+
+    // show net income
+    document.write(`El ingreso neto es: $ ${netIncome}`);
+  </script>
+</body>
+</html>
