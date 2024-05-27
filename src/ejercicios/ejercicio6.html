@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Imagina que estás pidiendo comida en un restaurante. Tu plato favorito es ceviche, así que lo elegirías si está en el menú. Si no hay ceviche, elegirías tacos al pastor. Si eso no está, te irías por empanada chilena. En el caso raro que ninguna de esas opciones esté disponible, te irías por una hamburguesa. Escribe una función, que de acuerdo a la disponibilidad de los platos en el menú, decidas qué ordenar.
+
+    let getOrder = (menu) => {
+      let order = undefined;
+      if (menu.includes('ceviche')) {
+        order = 'ceviche';
+      } else if (menu.includes('tacos al pastor')) {
+        order = 'tacos al pastor';
+      } else if (menu.includes('empanada chilena')) {
+        order = 'empanada chilena';
+      } else {
+        order = 'hamburguesa';
+      }
+      return order;
+    }
+  </script>
+</body>
+</html>
