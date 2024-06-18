@@ -9,6 +9,7 @@ h1 {
 }
 
 #questions {
+  display: none;
   background-color: #9FC131;
   color: black;
 }

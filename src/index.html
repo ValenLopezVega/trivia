@@ -10,10 +10,11 @@
     <h1>Trivia cultura general</h1>
     <div id="intro">
       <p>Ingrese su nombre</p>
-      <input type="text"/>
-      <button>Jugar</button>
+      <input id="name" type="text"/>
+      <button onclick="playGame()">Jugar</button>
     </div>
     <div id="questions">
+      <p id="welcomeMsg"></p>
       <form>
         <p>¿Cuál es el planeta más cercano al Sol en nuestro sistema solar?</p>
         <div>
@@ -46,8 +47,9 @@
         </div>
         <br>
         <div>
-          <button type="submit" onclick="greet();">Verificar</button>
+          <button onclick="greet();">Verificar</button>
         </div>
+        <button onclick="restart();">Reiniciar</button>
     </form>
     </div>
     <script src="main.js"></script>
