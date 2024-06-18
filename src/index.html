@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <form>
+    <h1>Trivia cultura general</h1>
+    <div id="intro">
+      <p>Ingrese su nombre</p>
+      <input type="text"/>
+      <button>Jugar</button>
+    </div>
+    <div id="questions">
+      <form>
         <p>¿Cuál es el planeta más cercano al Sol en nuestro sistema solar?</p>
         <div>
           <input type="radio" id="choice1" name="question1" value="saturno" />
@@ -42,6 +49,7 @@
           <button type="submit" onclick="greet();">Verificar</button>
         </div>
     </form>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

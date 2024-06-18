@@ -1,3 +1,14 @@
-/*
-  Aquí van los estilos
-*/
+h1 {
+  background-color: #042940;
+  color: white;
+}
+
+#intro {
+  background-color: #005C53;
+  color: white;
+}
+
+#questions {
+  background-color: #9FC131;
+  color: black;
+}
