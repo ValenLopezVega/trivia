@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Crea una web que pida, por medio de un prompt(), la edad de una persona, en años. Dependiendo del número brindado, la web debe dar un mensaje que clasifica a la persona en: toddler, preschooler, gradeschooler, teenager, young adult and adult, según el criterio de esta página.
+
+    let edad = prompt('Type age');
+    if(edad % 1 !== 0 || edad < 0 || edad === '') {
+      document.write('Invalid number');
+    } else {
+      if(edad >= 0 && edad < 1){
+        document.write('Is a baby');
+      } else {
+        if(edad >= 1 && edad < 3){
+          document.write('Is a toddler');
+        } else {
+          if(edad >= 3 && edad < 5){
+            document.write('Is a preschooler');
+        } else {
+          if(edad >= 5 && edad < 12){
+            document.write('Is a gradeschooler');
+          } else {
+            if(edad >= 12 && edad < 18){
+              document.write('Is a teen');
+            } else {
+              if(edad >= 18 && edad < 21){
+                document.write('Is a young adult');
+              } else {
+                document.write('Is an adult');
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  </script>
+</body>
+</html>
