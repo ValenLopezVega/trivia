@@ -18,5 +18,17 @@ const restart = () => {
   document.getElementById('intro').style.display = 'block';
 }
 
+const playBtn = document.getElementById('playGameBtn');
+playBtn.addEventListener('click', () => {
+  playGame();
+})
 
+const restartBtn = document.getElementById('restartGameBtn');
+restartBtn.addEventListener('click', () => {
+  restart();
+})
 
+const verifyBtn = document.getElementById('verifyAnswersBtn');
+verifyBtn.addEventListener('click', () => {
+  greet();
+})
