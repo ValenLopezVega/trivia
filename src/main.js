@@ -3,7 +3,9 @@ function greet() {
 
   let selected2 = document.querySelector('input[type=radio][name=question2]:checked');
 
-  alert(`Usted seleccionó ${selected1.value} y ${selected2.value}`);
+  let selected3 = document.querySelector('input[type=radio][name=question3]:checked');
+
+  alert(`Usted seleccionó ${selected1.value} , ${selected2.value} y ${selected3.value}`);
 }
 
 const playGame = () => {

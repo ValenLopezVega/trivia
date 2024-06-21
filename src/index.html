@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia cultura general</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Trivia cultura general</h1>
-    <div id="intro">
-      <p>Ingrese su nombre</p>
-      <input id="name" type="text"/>
-      <button id="playGameBtn">Jugar</button>
-    </div>
-    <div id="questions">
-      <p id="welcomeMsg"></p>
-      <form>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia cultura general</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Trivia cultura general</h1>
+  <div id="intro">
+    <p>Ingrese su nombre</p>
+    <input id="name" type="text" />
+    <button id="playGameBtn">Jugar</button>
+  </div>
+  <div id="questions">
+    <p id="welcomeMsg"></p>
+    <form>
+      <div id="question1">
         <p>¿Cuál es el planeta más cercano al Sol en nuestro sistema solar?</p>
-        <div>
-          <input type="radio" id="choice1" name="question1" value="saturno" />
-          <label for="choice1">Saturno</label>
-          <br>
-          <input type="radio" id="choice2" name="question1" value="mercurio"/>
-          <label for="choice2">Mercurio</label>
-          <br>
-          <input type="radio" id="choice3" name="question1" value="venus" />
-          <label for="choice3">Venus</label>
-          <br>
-          <input type="radio" id="choice4" name="question1" value="tierra"/>
-          <label for="choice4">Tierra</label>
-        </div>
+        <input type="radio" id="q1Choice1" name="question1" value="saturno" />
+        <label for="choice1">Saturno</label>
         <br>
+        <input type="radio" id="q1Choice2" name="question1" value="mercurio" />
+        <label for="choice2">Mercurio</label>
+        <br>
+        <input type="radio" id="q1Choice3" name="question1" value="venus" />
+        <label for="choice3">Venus</label>
+        <br>
+        <input type="radio" id="q1Choice4" name="question1" value="tierra" />
+        <label for="choice4">Tierra</label>
+        <br>
+      </div>
+      <div id="question2">
         <p>¿Cuál es el océano más grande del mundo?</p>
-        <div>
-          <input type="radio" id="choice1" name="question2" value="atlantico" />
-          <label for="choice1">Atlántico</label>
-          <br>
-          <input type="radio" id="choice2" name="question2" value="indico" />
-          <label for="choice2">Indico</label>
-          <br>
-          <input type="radio" id="choice3" name="question2" value="artico" />
-          <label for="choice3">Artico</label>
-          <br>
-          <input type="radio" id="choice4" name="question2" value="pacifico"/>
-          <label for="choice4">Pacífico</label>
-        </div>
+        <input type="radio" id="q2Choice1" name="question2" value="atlantico" />
+        <label for="choice1">Atlántico</label>
         <br>
-        <div>
-          <button id="verifyAnswersBtn">Verificar</button>
-        </div>
-        <button id="restartGameBtn">Reiniciar</button>
+        <input type="radio" id="q2Choice2" name="question2" value="indico" />
+        <label for="choice2">Indico</label>
+        <br>
+        <input type="radio" id="q2Choice3" name="question2" value="artico" />
+        <label for="choice3">Artico</label>
+        <br>
+        <input type="radio" id="q2Choice4" name="question2" value="pacifico" />
+        <label for="choice4">Pacífico</label>
+        <br>
+      </div>
+      <div id="question3">
+        <p>¿Cuál es la capital de Colombia</p>
+        <input type="radio" id="q3Choice1" name="question3" value="Medellin" />
+        <label for="choice1">Medellín</label>
+        <br>
+        <input type="radio" id="q3Choice2" name="question3" value="Cali" />
+        <label for="choice2">Cali</label>
+        <br>
+        <input type="radio" id="q3Choice3" name="question3" value="Bogota" />
+        <label for="choice3">Bogotá</label>
+        <br>
+        <input type="radio" id="q3Choice4" name="question3" value="Pereira" />
+        <label for="choice4">Pereira</label>
+        <br>
+      </div>
+      <div>
+        <button id="verifyAnswersBtn">Verificar</button>
+      </div>
+      <button id="restartGameBtn">Reiniciar</button>
     </form>
-    </div>
-    <script src="main.js"></script>
-  </body>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>
