@@ -19,6 +19,8 @@ const restart = () => {
 
 const showCorrectAnswer = () => {
   document.getElementById('q1Choice2Txt').style.backgroundColor = '#9FC131';
+  document.getElementById('q2Choice4Txt').style.backgroundColor = '#9FC131';
+  document.getElementById('q3Choice3Txt').style.backgroundColor = '#9FC131';
 }
 
 const playBtn = document.getElementById('playGameBtn');
