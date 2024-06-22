@@ -1,10 +1,7 @@
-function greet() {
+function verify() {
   let selected1 = document.querySelector('input[type=radio][name=question1]:checked');
-
   let selected2 = document.querySelector('input[type=radio][name=question2]:checked');
-
   let selected3 = document.querySelector('input[type=radio][name=question3]:checked');
-
   alert(`Usted seleccionó ${selected1.value} , ${selected2.value} y ${selected3.value}`);
 }
 
@@ -20,6 +17,10 @@ const restart = () => {
   document.getElementById('intro').style.display = 'block';
 }
 
+const showCorrectAnswer = () => {
+  document.getElementById('q1Choice2Txt').style.backgroundColor = '#9FC131';
+}
+
 const playBtn = document.getElementById('playGameBtn');
 playBtn.addEventListener('click', () => {
   playGame();
@@ -31,6 +32,8 @@ restartBtn.addEventListener('click', () => {
 })
 
 const verifyBtn = document.getElementById('verifyAnswersBtn');
-verifyBtn.addEventListener('click', () => {
-  greet();
+verifyBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  verify();
+  showCorrectAnswer();
 })
