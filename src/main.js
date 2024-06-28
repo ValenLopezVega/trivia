@@ -9,32 +9,30 @@ function verify() {
   let selected1 = document.querySelector('input[type=radio][name=question1]:checked');
   let selected2 = document.querySelector('input[type=radio][name=question2]:checked');
   let selected3 = document.querySelector('input[type=radio][name=question3]:checked');
-  alert(`Usted seleccionó ${selected1.value} , ${selected2.value} y ${selected3.value}`);
+
+  if(selected1.value === 'mercurio'){
+
+  }else{
+    document.getElementById(`${selected1.id}Txt`).style.backgroundColor = 'red';
+  }
+
+  if(selected2.value === 'pacifico'){
+
+  }else{
+    document.getElementById(`${selected2.id}Txt`).style.backgroundColor = 'red';
+  }
+
+  if(selected3.value === 'bogota'){
+
+  }else{
+    document.getElementById(`${selected3.id}Txt`).style.backgroundColor = 'red';
+  }
 }
 
 const showCorrectAnswer = () => {
   document.getElementById('q1Choice2Txt').style.backgroundColor = '#9FC131';
   document.getElementById('q2Choice4Txt').style.backgroundColor = '#9FC131';
   document.getElementById('q3Choice3Txt').style.backgroundColor = '#9FC131';
-}
-
-const showResults = () => {
-  const selected1 = document.querySelector('input[type=radio][name=question1]:checked');
-  const selected2 = document.querySelector('input[type=radio][name=question2]:checked');
-  const selected3 = document.querySelector('input[type=radio][name=question3]:checked');
-
-  const correctAnswers = {
-    question1: "Mercurio",
-    question2: "Pacífico",
-    question3: "Bogotá"
-  };
-
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = `
-    <p>Pregunta 1: Seleccionaste: ${selected1.value}, Respuesta correcta: ${correctAnswers.question1}</p>
-    <p>Pregunta 2: Seleccionaste: ${selected2.value}, Respuesta correcta: ${correctAnswers.question2}</p>
-    <p>Pregunta 3: Seleccionaste: ${selected3.value}, Respuesta correcta: ${correctAnswers.question3}</p>
-  `;
 }
 
 const restart = () => {
@@ -57,5 +55,4 @@ verifyBtn.addEventListener('click', (e) => {
   e.preventDefault();
   verify();
   showCorrectAnswer();
-  showResults();
 })
