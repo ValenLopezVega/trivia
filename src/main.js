@@ -1,6 +1,7 @@
 const playGame = () => {
   let name = document.getElementById('name').value;
-  document.getElementById('questions').style.display = 'block';
+  document.getElementById('general').style.display = 'block';
+  document.getElementById('movies').style.display = 'block';
   document.getElementById('intro').style.display = 'none';
   document.getElementById('welcomeMsg').textContent = `Hola ${name}`;
 }
@@ -36,7 +37,8 @@ const showCorrectAnswer = () => {
 }
 
 const restart = () => {
-  document.getElementById('questions').style.display = 'none';
+  document.getElementById('general').style.display = 'none';
+  document.getElementById('movies').style.display = 'none';
   document.getElementById('intro').style.display = 'block';
 }
 

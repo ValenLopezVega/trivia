@@ -8,7 +8,13 @@ h1 {
   color: white;
 }
 
-#questions {
+#general {
+  display: none;
+  background-color: #D6D58E;
+  color: black;
+}
+
+#movies {
   display: none;
   background-color: #D6D58E;
   color: black;
