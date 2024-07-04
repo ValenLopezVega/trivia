@@ -19,3 +19,8 @@ h1 {
   background-color: #D6D58E;
   color: black;
 }
+
+#questions {
+  display: none;
+  color: black;
+}

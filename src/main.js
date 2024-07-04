@@ -1,9 +1,24 @@
-const playGame = () => {
+const shooseTrivia = () => {
   let name = document.getElementById('name').value;
+  document.getElementById('welcomeMsg').textContent = `Hola ${name}, escoge un tema`;
+  document.getElementById('questions').style.display = 'block';
+  document.getElementById('intro').style.display = 'none';
+}
+
+const playGeneral = () => {
+  document.getElementById('welcomeMsg').style.display = 'none';
+  document.getElementById('questions').style.display = 'none';
   document.getElementById('general').style.display = 'block';
+  document.getElementById('movies').style.display = 'none';
+  document.getElementById('intro').style.display = 'none';
+}
+
+const playMovies = () => {
+  document.getElementById('welcomeMsg').style.display = 'none';
+  document.getElementById('questions').style.display = 'none';
+  document.getElementById('general').style.display = 'none';
   document.getElementById('movies').style.display = 'block';
   document.getElementById('intro').style.display = 'none';
-  document.getElementById('welcomeMsg').textContent = `Hola ${name}`;
 }
 
 function verify() {
@@ -37,6 +52,7 @@ const showCorrectAnswer = () => {
 }
 
 const restart = () => {
+  document.getElementById('questions').style.display = 'none';
   document.getElementById('general').style.display = 'none';
   document.getElementById('movies').style.display = 'none';
   document.getElementById('intro').style.display = 'block';
@@ -44,7 +60,17 @@ const restart = () => {
 
 const playBtn = document.getElementById('playGameBtn');
 playBtn.addEventListener('click', () => {
-  playGame();
+  shooseTrivia();
+})
+
+const playGeneralBtn = document.getElementById('generalTriviaBtn');
+playGeneralBtn.addEventListener('click', () => {
+  playGeneral();
+})
+
+const playMoviesBtn = document.getElementById('moviesTriviaBtn');
+playMoviesBtn.addEventListener('click', () => {
+  playMovies();
 })
 
 const restartBtn = document.getElementById('restartGameBtn');
