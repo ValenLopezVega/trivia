@@ -51,6 +51,36 @@ const showCorrectAnswer = () => {
   document.getElementById('q3Choice3Txt').style.backgroundColor = '#9FC131';
 }
 
+function verifyMovies() {
+  let selected4 = document.querySelector('input[type=radio][name=question4]:checked');
+  let selected5 = document.querySelector('input[type=radio][name=question5]:checked');
+  let selected6 = document.querySelector('input[type=radio][name=question6]:checked');
+
+  if(selected4.value === 'kathryn-bigelow'){
+
+  }else{
+    document.getElementById(`${selected4.id}Txt`).style.backgroundColor = 'red';
+  }
+
+  if(selected5.value === '96'){
+
+  }else{
+    document.getElementById(`${selected5.id}Txt`).style.backgroundColor = 'red';
+  }
+
+  if(selected6.value === 'celine-dion'){
+
+  }else{
+    document.getElementById(`${selected6.id}Txt`).style.backgroundColor = 'red';
+  }
+}
+
+const showCorrectMovies = () => {
+  document.getElementById('q4Choice1Txt').style.backgroundColor = '#9FC131';
+  document.getElementById('q5Choice2Txt').style.backgroundColor = '#9FC131';
+  document.getElementById('q6Choice4Txt').style.backgroundColor = '#9FC131';
+}
+
 const restart = () => {
   document.getElementById('questions').style.display = 'none';
   document.getElementById('general').style.display = 'none';
@@ -83,4 +113,11 @@ verifyBtn.addEventListener('click', (e) => {
   e.preventDefault();
   verify();
   showCorrectAnswer();
+})
+
+const verifyMoviesBtn = document.getElementById('verifyMoviesBtn');
+verifyMoviesBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  verifyMovies();
+  showCorrectMovies();
 })
