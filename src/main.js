@@ -1,5 +1,13 @@
-const shooseTrivia = () => {
+const validateName = () => {
+  let nameLocalStorage = localStorage.getItem('playerName');
+  if(nameLocalStorage.length > 0){
+    document.getElementById('name').value = nameLocalStorage;
+  }
+}
+
+const chooseTrivia = () => {
   let name = document.getElementById('name').value;
+  localStorage.setItem('playerName', name);
   document.getElementById('welcomeMsg').textContent = `Hola ${name}, escoge un tema`;
   document.getElementById('questions').style.display = 'block';
   document.getElementById('intro').style.display = 'none';
@@ -26,20 +34,22 @@ function verifyGeneral() {
   let selected2 = document.querySelector('input[type=radio][name=question2]:checked');
   let selected3 = document.querySelector('input[type=radio][name=question3]:checked');
 
-  if(selected1.value === 'mercurio'){
+  let pointsGeneral = 0;
 
+  if(selected1.value === 'mercurio'){
+    pointsGeneral +=1;
   }else{
     document.getElementById(`${selected1.id}Txt`).style.backgroundColor = 'red';
   }
 
   if(selected2.value === 'pacifico'){
-
+    pointsGeneral +=1;
   }else{
     document.getElementById(`${selected2.id}Txt`).style.backgroundColor = 'red';
   }
 
   if(selected3.value === 'bogota'){
-
+    pointsGeneral +=1;
   }else{
     document.getElementById(`${selected3.id}Txt`).style.backgroundColor = 'red';
   }
@@ -56,23 +66,26 @@ function verifyMovies() {
   let selected5 = document.querySelector('input[type=radio][name=question5]:checked');
   let selected6 = document.querySelector('input[type=radio][name=question6]:checked');
 
-  if(selected4.value === 'kathryn-bigelow'){
+  let pointsMovies = 0;
 
+  if(selected4.value === 'kathryn-bigelow'){
+    pointsMovies +=1;
   }else{
     document.getElementById(`${selected4.id}Txt`).style.backgroundColor = 'red';
   }
 
   if(selected5.value === '96'){
-
+    pointsMovies +=1;
   }else{
     document.getElementById(`${selected5.id}Txt`).style.backgroundColor = 'red';
   }
 
   if(selected6.value === 'celine-dion'){
-
+    pointsMovies +=1;
   }else{
     document.getElementById(`${selected6.id}Txt`).style.backgroundColor = 'red';
   }
+  document.getElementById('resultsMovies').textContent = `${localStorage.getItem('playerName')}, su puntaje es: ${pointsMovies}`;
 }
 
 const showCorrectMovies = () => {
@@ -90,7 +103,7 @@ const restart = () => {
 
 const playBtn = document.getElementById('playGameBtn');
 playBtn.addEventListener('click', () => {
-  shooseTrivia();
+  chooseTrivia();
 })
 
 const playGeneralBtn = document.getElementById('generalTriviaBtn');
@@ -121,3 +134,5 @@ verifyMoviesBtn.addEventListener('click', (e) => {
   verifyMovies();
   showCorrectMovies();
 })
+
+validateName();
