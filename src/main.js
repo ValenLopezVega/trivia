@@ -53,6 +53,7 @@ function verifyGeneral() {
   }else{
     document.getElementById(`${selected3.id}Txt`).style.backgroundColor = 'red';
   }
+  document.getElementById('resultsGeneral').textContent = `${localStorage.getItem('playerName')}, su puntaje es: ${pointsGeneral}`;
 }
 
 const showCorrectGeneral = () => {
