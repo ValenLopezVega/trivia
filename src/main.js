@@ -21,7 +21,7 @@ const playMovies = () => {
   document.getElementById('intro').style.display = 'none';
 }
 
-function verify() {
+function verifyGeneral() {
   let selected1 = document.querySelector('input[type=radio][name=question1]:checked');
   let selected2 = document.querySelector('input[type=radio][name=question2]:checked');
   let selected3 = document.querySelector('input[type=radio][name=question3]:checked');
@@ -45,7 +45,7 @@ function verify() {
   }
 }
 
-const showCorrectAnswer = () => {
+const showCorrectGeneral = () => {
   document.getElementById('q1Choice2Txt').style.backgroundColor = '#9FC131';
   document.getElementById('q2Choice4Txt').style.backgroundColor = '#9FC131';
   document.getElementById('q3Choice3Txt').style.backgroundColor = '#9FC131';
@@ -108,11 +108,11 @@ restartBtn.addEventListener('click', () => {
   restart();
 })
 
-const verifyBtn = document.getElementById('verifyAnswersBtn');
-verifyBtn.addEventListener('click', (e) => {
+const verifyGeneralBtn = document.getElementById('verifyGeneralBtn');
+verifyGeneralBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  verify();
-  showCorrectAnswer();
+  verifyGeneral();
+  showCorrectGeneral();
 })
 
 const verifyMoviesBtn = document.getElementById('verifyMoviesBtn');
