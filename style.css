@@ -1,0 +1,26 @@
+h1 {
+  background-color: #042940;
+  color: white;
+}
+
+#intro {
+  background-color: #005C53;
+  color: white;
+}
+
+#general {
+  display: none;
+  background-color: #D6D58E;
+  color: black;
+}
+
+#movies {
+  display: none;
+  background-color: #D6D58E;
+  color: black;
+}
+
+#questions {
+  display: none;
+  color: black;
+}

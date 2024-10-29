@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia cultura general</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Trivia cultura general</h1>
+  <div id="intro">
+    <p>Ingrese su nombre</p>
+    <input id="name" type="text" />
+    <button id="playGameBtn">Jugar</button>
+  </div>
+  <div id="welcome">
+    <p id="welcomeMsg">
+    </p>
+  </div>
+  <div id="questions">
+    <button id="generalTriviaBtn">Cultura general</button>
+    <button id="moviesTriviaBtn">Cine</button>
+  </div>
+  <div id="general">
+    <form>
+      <div id="question1">
+        <p>¿Cuál es el planeta más cercano al Sol en nuestro sistema solar?</p>
+        <input type="radio" id="q1Choice1" name="question1" value="saturno" />
+        <label id="q1Choice1Txt" for="q1Choice1">Saturno</label>
+        <br>
+        <input type="radio" id="q1Choice2" name="question1" value="mercurio" />
+        <label id="q1Choice2Txt" for="q1Choice2">Mercurio</label>
+        <br>
+        <input type="radio" id="q1Choice3" name="question1" value="venus" />
+        <label id="q1Choice3Txt" for="q1Choice3">Venus</label>
+        <br>
+        <input type="radio" id="q1Choice4" name="question1" value="tierra" />
+        <label id="q1Choice4Txt" for="q1Choice4">Tierra</label>
+        <br>
+      </div>
+      <div id="question2">
+        <p>¿Cuál es el océano más grande del mundo?</p>
+        <input type="radio" id="q2Choice1" name="question2" value="atlantico" />
+        <label id="q2Choice1Txt"  for="q2Choice1">Atlántico</label>
+        <br>
+        <input type="radio" id="q2Choice2" name="question2" value="indico" />
+        <label id="q2Choice2Txt"  for="q2Choice2">Indico</label>
+        <br>
+        <input type="radio" id="q2Choice3" name="question2" value="artico" />
+        <label id="q2Choice3Txt"  for="q2Choice3">Artico</label>
+        <br>
+        <input type="radio" id="q2Choice4" name="question2" value="pacifico" />
+        <label id="q2Choice4Txt" for="q2Choice4">Pacífico</label>
+        <br>
+      </div>
+      <div id="question3">
+        <p>¿Cuál es la capital de Colombia</p>
+        <input type="radio" id="q3Choice1" name="question3" value="Medellin" />
+        <label id="q3Choice1Txt"  for="q3Choice1">Medellín</label>
+        <br>
+        <input type="radio" id="q3Choice2" name="question3" value="Cali" />
+        <label id="q3Choice2Txt"  for="q3Choice2">Cali</label>
+        <br>
+        <input type="radio" id="q3Choice3" name="question3" value="bogota" />
+        <label id="q3Choice3Txt" for="q3Choice3">Bogotá</label>
+        <br>
+        <input type="radio" id="q3Choice4" name="question3" value="Pereira" />
+        <label id="q3Choice4Txt"  for="q3Choice4">Pereira</label>
+        <br>
+      </div>
+      <div id="resultsGeneral"></div>
+      <div>
+        <button id="verifyGeneralBtn">Verificar</button>
+      </div>
+      <button id="restartGameBtn">Reiniciar</button>
+    </form>
+  </div>
+  <div id="movies">
+    <form>
+      <div id="question4">
+        <p>¿Cuál fue la primera directora en ganar un Oscar de la Academia?</p>
+        <input type="radio" id="q4Choice1" name="question4" value="kathryn-bigelow" />
+        <label id="q4Choice1Txt" for="q4Choice1">Kathryn Bigelow</label>
+        <br>
+        <input type="radio" id="q4Choice2" name="question4" value="sophia-coppola" />
+        <label id="q4Choice2Txt" for="q4Choice2">Sophia Coppola</label>
+        <br>
+        <input type="radio" id="q4Choice3" name="question4" value="agnes-varda" />
+        <label id="q4Choice3Txt" for="q4Choice3">Agnes Varda</label>
+        <br>
+        <input type="radio" id="q4Choice4" name="question4" value="emerald-fennell" />
+        <label id="q4Choice4Txt" for="q4Choice4">Emerald Fennell</label>
+        <br>
+      </div>
+      <div id="question5">
+        <p>¿Cuantas ceremomias de premios Oscar ha habido hasta 2024? </p>
+        <input type="radio" id="q5Choice1" name="question5" value="83" />
+        <label id="q5Choice1Txt" for="q5Choice1">83</label>
+        <br>
+        <input type="radio" id="q5Choice2" name="question5" value="96" />
+        <label id="q5Choice2Txt" for="q5Choice2">96</label>
+        <br>
+        <input type="radio" id="q5Choice3" name="question5" value="104" />
+        <label id="q5Choice3Txt" for="q5Choice3">104</label>
+        <br>
+        <input type="radio" id="q5Choice4" name="question5" value="98" />
+        <label id="q5Choice4Txt" for="q5Choice4">98</label>
+        <br>
+      </div>
+      <div id="question6">
+        <p>¿Quién cantó "My Heart Will Go On" en Titanic?</p>
+        <input type="radio" id="q6Choice1" name="question6" value="lady-gaga" />
+        <label id="q6Choice1Txt" for="q6Choice1">Lady Gaga</label>
+        <br>
+        <input type="radio" id="q6Choice2" name="question6" value="whitney-houston" />
+        <label id="q6Choice2Txt" for="q6Choice2">Whitney Houston</label>
+        <br>
+        <input type="radio" id="q6Choice3" name="question6" value="mariah-carey" />
+        <label id="q6Choice3Txt" for="q6Choice3">Mariah Carey</label>
+        <br>
+        <input type="radio" id="q6Choice4" name="question6" value="celine-dion" />
+        <label id="q6Choice4Txt" for="q6Choice4">Celine Dion</label>
+        <br>
+      </div>
+      <div id="resultsMovies"></div>
+      <div>
+        <button id="verifyMoviesBtn">Verificar</button>
+      </div>
+      <button id="restartGameMoviesBtn">Reiniciar</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
