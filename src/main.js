@@ -1,6 +1,6 @@
 const validateName = () => {
   let nameLocalStorage = localStorage.getItem('playerName');
-  if(nameLocalStorage.length > 0){
+  if(nameLocalStorage !== null && nameLocalStorage.length > 0){
     document.getElementById('name').value = nameLocalStorage;
   }
 }
@@ -30,6 +30,8 @@ const playMovies = () => {
 }
 
 function verifyGeneral() {
+  document.getElementById('verifyGeneralBtn').style.display = 'none';
+
   let selected1 = document.querySelector('input[type=radio][name=question1]:checked');
   let selected2 = document.querySelector('input[type=radio][name=question2]:checked');
   let selected3 = document.querySelector('input[type=radio][name=question3]:checked');
@@ -63,6 +65,8 @@ const showCorrectGeneral = () => {
 }
 
 function verifyMovies() {
+  document.getElementById('verifyMoviesBtn').style.display = 'none';
+
   let selected4 = document.querySelector('input[type=radio][name=question4]:checked');
   let selected5 = document.querySelector('input[type=radio][name=question5]:checked');
   let selected6 = document.querySelector('input[type=radio][name=question6]:checked');
