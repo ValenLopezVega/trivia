@@ -5,7 +5,8 @@
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d src",
+    "start": "serve src/"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/ValenLopezVega/trivia#readme",
   "dependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "serve": "^14.2.4"
   }
 }
