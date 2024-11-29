@@ -8,7 +8,7 @@ const assets = [
   'index.html',
   'main.js',
   'style.css',
-  'src/img/favicon.ico'
+  'img/favicon.ico'
 ]
 
 // eslint-disable-next-line arrow-parens
